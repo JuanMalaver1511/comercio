@@ -10,11 +10,6 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
-
-  const handleLogin = (status) => {
-    setLoggedIn(status);
-  };
   return (
       <GlobalProvider>
         <div className="min-h-screen flex justify-center items-center">
