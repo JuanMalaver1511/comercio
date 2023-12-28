@@ -16,12 +16,12 @@ export const useGlobalState = () => {
 
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState, () => {
-    const localData = localStorage.getItem("transactions");
+    const localData = sessionStorage.getItem("transactions");
     return localData ? JSON.parse(localData) : initialState;
   });
 
   useEffect(() => {
-    localStorage.setItem("transactions", JSON.stringify(state));
+    sessionStorage.setItem("transactions", JSON.stringify(state));
   }, [state]);
 
   const deleteTransaction = (id) =>
