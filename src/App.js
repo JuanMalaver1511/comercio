@@ -5,9 +5,6 @@ import { IncomeExpenses } from "./components/IncomeExpenses";
 import { TransactionList } from "./components/transactions/TransactionList";
 import { TransactionForm } from "./components/transactions/TransactionForm";
 import { ExpenseChart } from "./components/ExpenseChart";
-import LoginForm from "./components/LoginForm";
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
