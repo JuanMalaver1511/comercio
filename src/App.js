@@ -16,11 +16,8 @@ function App() {
     setLoggedIn(status);
   };
   return (
-    <Router>
       <GlobalProvider>
         <div className="min-h-screen flex justify-center items-center">
-          {loggedIn ? (
-
             <div className="min-h-screen mx-auto max-w-6xl">
               <div className="w-full h-full flex justify-center items-center">
                 <div className="bg-neutral-800 p-10 rounded-md w-full">
@@ -38,13 +35,9 @@ function App() {
                   </div>
                 </div>
               </div>
-            </div>
-          ) : (
-            <LoginForm onLogin={handleLogin} />
-          )}
+            </div>        
         </div>
       </GlobalProvider>
-    </Router>
   );
 }
 
